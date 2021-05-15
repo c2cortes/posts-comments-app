@@ -1,7 +1,8 @@
-import { SET_POSTS } from './actions';
+import { SET_POSTS, SET_COMMENTS } from './actions';
 
 const initialState = {
-    posts: []
+    postsList: [],
+    postsComments: []
 };
 
 export const posts = (state = initialState, action) => {
@@ -11,7 +12,12 @@ export const posts = (state = initialState, action) => {
         case SET_POSTS:
             return {
                 ...state,
-                posts: payload
+                postsList: payload.data
+            };
+        case SET_COMMENTS:
+            return {
+                ...state,
+                commentsList: payload.data
             };
         default:
             return state;

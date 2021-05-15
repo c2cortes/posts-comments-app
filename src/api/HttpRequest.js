@@ -1,5 +1,5 @@
 export const request = async (endpoint, method, data = {}, headers = { 'Content-Type': 'application/json' }) => {
-    if(method == 'POST'){
+    if(method === 'POST'){
         try {
             const response = await fetch(endpoint, {
                 method, // *GET, POST, PUT, DELETE, etc.
@@ -15,7 +15,7 @@ export const request = async (endpoint, method, data = {}, headers = { 'Content-
         } catch(e) {
             console.log('Error making the request => ', e)
         }
-    } else if(method == 'GET') {
+    } else if(method === 'GET') {
         try {
             const myHeaders = new Headers();
             const myRequest = new Request(endpoint, {

@@ -1,10 +1,13 @@
 import { ENV } from '../../environment';
 import { request } from '../../api/HttpRequest';
-import { setPosts } from './actions';
+import { setPosts, setComments } from './actions';
 
 export const getPosts = () => async (dispatch, getState) => {
     const endpoint = `${ENV.API_URL}posts`;
     const response = await request(endpoint, 'GET');
-    const { data } = response;
-    dispatch(setPosts(data));
-  };
+    dispatch(setPosts(response));
+
+    const commentsEndpoint = `${ENV.API_URL}comments`;
+    const commentsResponse = await request(commentsEndpoint, 'GET');
+    dispatch(setComments(commentsResponse));
+};
