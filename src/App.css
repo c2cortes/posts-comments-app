@@ -38,7 +38,7 @@
 }
 
 .comment-text {
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .comments-title {
@@ -48,4 +48,8 @@
 .app-title{
   margin: 30px;
   text-align: center;
+}
+
+.comment-form-wrapper{
+  margin-bottom: 50px;
 }
