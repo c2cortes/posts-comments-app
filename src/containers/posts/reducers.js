@@ -20,12 +20,9 @@ export const posts = (state = initialState, action) => {
                 commentsList: payload.data
             };
         case ADD_POST_COMMENT:
-            const _commentsList = state.commentsList.slice()
-            _commentsList.push(payload.data);
-            // console.log('_commentsList => ', _commentsList);
             return {
                 ...state,
-                commentsList: _commentsList
+                commentsList: [...state.commentsList, payload.data]
             };
         default:
             return state;
