@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  text-align: left;
 }
 
 .App-logo {
@@ -35,4 +35,21 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.comment-text {
+  font-size: 14px;
+}
+
+.comments-title {
+  font-size: 16px;
+}
+
+.app-title{
+  margin: 30px;
+  text-align: center;
+}
+
+.comment-form-wrapper{
+  margin-bottom: 50px;
 }
