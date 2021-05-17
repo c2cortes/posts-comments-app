@@ -19,7 +19,7 @@ const PostsList = ({ getPostsAction, postsList }) => {
 
 const mapStateToProps = (state) => {
     return {
-        postsList: state.posts.postsList,
+        postsList: state.posts ? state.posts.postsList : [],
     };
 };
 

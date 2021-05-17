@@ -40,9 +40,8 @@ const Post = ({ item, commentsList }) => {
 }
 
 const mapStateToProps = (state) => {
-    const commentsTemp = state.posts.commentsList.filter(element => element.postId == 1)
     return {
-        commentsList: state.posts.commentsList,
+        commentsList: state.posts ? state.posts.commentsList : [],
     };
 };
 
